@@ -15,6 +15,7 @@ async function main() {
     body: JSON.stringify({
       model: 'gpt-4o',
       messages: [
+        { role: 'system', content: 'You are a friendly Budget Travel Planner, specializing in cost-conscious travel advice. You help users find cheap flights, budget-friendly accommodations, affordable itineraries, and low-cost activities in their chosen destination.If the users query is unrelated to budget travel, respond by stating that you do not know.' },
         { role: 'user', content: 'What are some cheap ways to travel around Europe?'}
       ]
     })
@@ -24,3 +25,4 @@ async function main() {
   // Log result to the console
   console.log(result.choices[0].message.content);
 };
+main();
