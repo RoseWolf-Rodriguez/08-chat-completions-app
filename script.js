@@ -42,6 +42,7 @@ chatForm.addEventListener('submit', async function(event) {
         messages: messages, max_completion_tokens: 800
         temperature: 0.7
         // Note: The temperature can be adjusted to control the randomness of the AI's responses
+        frequency_penalty: 0.8,
       })
     });
 
